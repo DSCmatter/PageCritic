@@ -1,5 +1,6 @@
 import express from 'express';
 import cors from 'cors';
+import authRoutes from './routes/authRoutes';
 
 const app = express();
 
@@ -13,6 +14,9 @@ app.get('/', (req,res) => {
 });
 
 // TODO: Import and use your API routes here (e.g., authRoutes, bookRoutes, reviewRoutes)
+
+// Use your API routes
+app.use('/api/auth', authRoutes); // All auth routes will be prefixed with /api/auth
 
 // Error handling middleware 
 app.use((err: any, req: express.Request, res: express.Response, next: express.NextFunction) => {
