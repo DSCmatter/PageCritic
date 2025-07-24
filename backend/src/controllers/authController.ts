@@ -125,3 +125,26 @@ export const getMe = async (req: AuthenticatedRequest, res: Response) => {
         res.status(401).json({ message: 'Unauthorized' });
     }
 };
+
+// Delete User's account
+export const deleteUser = async (req: AuthenticatedRequest, res: Response) => {
+    const userId = req.user?.id;
+
+    if (!userId) {
+        return res.status(401).json({ message: 'Not authorized, user ID missing.' });
+    }
+
+    try {
+        const deleteResult = await pool.query('DELETE FROM users WHERE id = $1 RETURNING id', [userId]);
+
+        if (deleteResult.rows.length === 0) {
+            return res.status(404).json({ message: 'User not found or already deleted' });
+        }
+
+        res.status(200).json({ message: 'User account deleted successfully' });
+
+    } catch (error: any) {
+        console.error('Error deleting user:', error.message);
+        res.status(500).json({ message: 'Server error while deleting user' });
+    }
+}

@@ -1,7 +1,7 @@
 // backend/src/routes/authRoutes.ts
 
 import { Router } from 'express';
-import { signupUser, loginUser, getMe } from '../controllers/authController'; // Import controller functions
+import { signupUser, loginUser, getMe, deleteUser } from '../controllers/authController'; // Import controller functions
 import { protect } from '../middleware/authMiddleware'; // Import the protect middleware
 
 const router = Router();
@@ -12,5 +12,6 @@ router.post('/login', loginUser);   // Route for user login
 
 // Private routes (requires authentication)
 router.get('/me', protect, getMe);  // Route to get the current user's profile
+router.delete('/me', protect, deleteUser);
 
 export default router;

@@ -1,6 +1,8 @@
 import express from 'express';
 import cors from 'cors';
 import authRoutes from './routes/authRoutes';
+import bookRoutes from './routes/bookRoutes';
+import reviewRoutes from './routes/reviewRoutes';
 
 const app = express();
 
@@ -17,6 +19,9 @@ app.get('/', (req,res) => {
 
 // Use your API routes
 app.use('/api/auth', authRoutes); // All auth routes will be prefixed with /api/auth
+app.use('/api/books', bookRoutes); // All book routes will be prefixed with /api/books
+app.use('/api/books', reviewRoutes); // Get Reviews of books
+app.use('/api/reviews', reviewRoutes); // All review routes will be prefixed with /api/reviews
 
 // Error handling middleware 
 app.use((err: any, req: express.Request, res: express.Response, next: express.NextFunction) => {
