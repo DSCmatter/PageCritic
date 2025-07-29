@@ -110,6 +110,8 @@ Create a file `backend/sql/init.sql` and add the schema provided in the document
 psql -U book_app_user -d book_review_db -h localhost -p 5432 -f sql/init.sql
 ```
 
+To know more about the different commands used to navigate, inspect and query this database, please check out [the PostgreSQL Command Line (psql) Navigation Guide.](psqlCMDs.md)
+
 ### 5. Run the Backend Server
 
 ```bash
@@ -142,6 +144,8 @@ All endpoints are prefixed with `/api`.
 
 * **POST /api/books/\:id/reviews** – Add a review to a specific book (Protected).
 * **DELETE /api/reviews/\:id** – Delete a review (Protected).
+
+More information about these endpoints are described in [the Book API cURL commands and responses (WSL2 / Ubuntu).](apiResponses.md)
 
 ---
 
