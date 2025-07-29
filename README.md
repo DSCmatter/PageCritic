@@ -58,8 +58,8 @@ Ensure you have the following installed on your system:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/book-review-platform.git
-cd book-review-platform
+git clone https://github.com/DSCmatter/PageCritic
+cd PageCritic
 ```
 
 ### 2. Backend Setup
@@ -94,6 +94,8 @@ PORT=5000
 ### 4. PostgreSQL Database Setup
 
 **Create the database and user:**
+
+Feel free to replace `some-passwd` with your own.
 
 ```sql
 CREATE DATABASE book_review_db;
@@ -190,5 +192,14 @@ All endpoints are prefixed with `/api`.
 * Advanced sorting and search.
 * Logging integration.
 * Unit and integration tests.
+
+---
+
+## License
+
+The MIT License (MIT)
+
+Copyright (c) 2025 Vasant Kumar Mogia
+More information available in [LICENSE](LICENSE).
 
 ---
