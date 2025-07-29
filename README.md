@@ -58,8 +58,8 @@ Ensure you have the following installed on your system:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/book-review-platform.git
-cd book-review-platform
+git clone https://github.com/DSCmatter/PageCritic
+cd PageCritic
 ```
 
 ### 2. Backend Setup
@@ -95,6 +95,8 @@ PORT=5000
 
 **Create the database and user:**
 
+Feel free to replace `some-passwd` with your own.
+
 ```sql
 CREATE DATABASE book_review_db;
 CREATE USER book_app_user WITH PASSWORD 'some-passwd';
@@ -107,6 +109,8 @@ Create a file `backend/sql/init.sql` and add the schema provided in the document
 ```bash
 psql -U book_app_user -d book_review_db -h localhost -p 5432 -f sql/init.sql
 ```
+
+To know more about the different commands used to navigate, inspect and query this database, please check out [the PostgreSQL Command Line (psql) Navigation Guide.](psqlCMDs.md)
 
 ### 5. Run the Backend Server
 
@@ -140,6 +144,8 @@ All endpoints are prefixed with `/api`.
 
 * **POST /api/books/\:id/reviews** – Add a review to a specific book (Protected).
 * **DELETE /api/reviews/\:id** – Delete a review (Protected).
+
+More information about these endpoints are described in [the Book API cURL commands and responses (WSL2 / Ubuntu).](apiResponses.md)
 
 ---
 
@@ -190,5 +196,14 @@ All endpoints are prefixed with `/api`.
 * Advanced sorting and search.
 * Logging integration.
 * Unit and integration tests.
+
+---
+
+## License
+
+The MIT License (MIT)
+
+Copyright (c) 2025 Vasant Kumar Mogia
+More information available in [LICENSE](LICENSE).
 
 ---
