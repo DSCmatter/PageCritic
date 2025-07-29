@@ -1,6 +1,6 @@
-# Book Review Platform - Backend
+# PageCritic
 
-This repository contains the backend API for a Book Review Platform, built with **Node.js**, **Express**, **TypeScript**, and **PostgreSQL**. It provides a robust set of RESTful endpoints for user authentication, book management, and review functionalities.
+Is a set of backend API for a Book Review Platform, built with **Node.js**, **Express**, **TypeScript**, and **PostgreSQL**. It provides a robust set of RESTful endpoints for user authentication, book management, and review functionalities.
 
 ---
 
@@ -145,7 +145,7 @@ All endpoints are prefixed with `/api`.
 * **POST /api/books/\:id/reviews** – Add a review to a specific book (Protected).
 * **DELETE /api/reviews/\:id** – Delete a review (Protected).
 
-More information about these endpoints are described in [the Book API cURL commands and responses (WSL2 / Ubuntu).](apiResponses.md)
+More information about these endpoints are described in [apiResponses.md](apiResponses.md)
 
 ---
 
@@ -201,9 +201,4 @@ More information about these endpoints are described in [the Book API cURL comma
 
 ## License
 
-The MIT License (MIT)
-
-Copyright (c) 2025 Vasant Kumar Mogia
-More information available in [LICENSE](LICENSE).
-
----
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
