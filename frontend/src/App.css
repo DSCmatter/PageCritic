@@ -1,12 +1,12 @@
 /* frontend/src/App.css */
 
-body {
+/* body {
   font-family: sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f4f4f4;
   color: #333;
-}
+} */
 
 .main-container {
   display: flex;
@@ -44,14 +44,22 @@ nav a, nav button {
 }
 
 .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-grow: 1;
-  max-width: 1200px;
   width: 100%;
   margin: 2rem auto;
   padding: 2rem;
-  background: #fff;
+  background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content > div {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .form-container {

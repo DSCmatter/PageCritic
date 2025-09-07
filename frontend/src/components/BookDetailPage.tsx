@@ -14,7 +14,7 @@ interface Book {
     average_rating: number;
 }
 
-const BookDetailPage = () => {
+export const BookDetailPage = () => {
     const { id } = useParams<{ id: string }>();
     const [book, setBook] = useState<Book | null>(null);
     const [loading, setLoading] = useState(true);
@@ -54,5 +54,3 @@ const BookDetailPage = () => {
         </div>
     );
 };
-
-export default BookDetailPage;

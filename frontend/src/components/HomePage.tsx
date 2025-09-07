@@ -1,4 +1,4 @@
-const HomePage = () => {
+export const HomePage = () => {
     return (
         <div>
             <h2>Welcome to the Book Review Platform</h2>
@@ -6,5 +6,3 @@ const HomePage = () => {
         </div>
     );
 };
-
-export default HomePage;

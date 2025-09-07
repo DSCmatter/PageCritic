@@ -15,7 +15,7 @@ interface Book {
     average_rating: number;
 }
 
-const BookListPage = () => {
+export const BookListPage = () => {
     const { isAuthenticated } = useAuth();
     const [books, setBooks] = useState<Book[]>([]);
     const [loading, setLoading] = useState(true);
@@ -129,5 +129,3 @@ const BookListPage = () => {
         </div>
     );
 };
-
-export default BookListPage;
