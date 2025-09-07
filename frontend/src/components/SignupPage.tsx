@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import type { AxiosError } from 'axios';
 import type { ApiError } from '../types';
 
-const SignupPage = () => {
+export const SignupPage = () => {
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -55,5 +55,3 @@ const SignupPage = () => {
         </div>
     );
 };
-
-export default SignupPage;

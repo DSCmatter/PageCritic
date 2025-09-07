@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { AxiosError } from 'axios';
 import type { ApiError } from '../types'; 
 
-const AddBookPage = () => {
+export const AddBookPage = () => {
     const [title, setTitle] = useState('');
     const [author, setAuthor] = useState('');
     const [genre, setGenre] = useState('');
@@ -61,5 +61,3 @@ const AddBookPage = () => {
         </div>
     );
 };
-
-export default AddBookPage;
